@@ -1,0 +1,57 @@
+/* FONTE DO CLASH ROYALE (Supercell Magic) */
+        @import url('https://fonts.cdnfonts.com/css/supercell-magic');
+        
+        body {
+            font-family: 'Supercell Magic', sans-serif;
+            background-color: #1a2a42; /* Cor de fundo do Clash Royale */
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ESTILO DAS CARTAS (efeito hover e sombra) */
+        img {
+            width: 140px;
+            height: 180px;
+            margin: 5px;
+            transition: transform 0.2s;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5)); /* Brilho dourado */
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(-2deg); /* Efeito de "levantar" a carta */
+            cursor: pointer;
+        }
+
+        /* ESTILO DO TEXTO (títulos e parágrafos) */
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 10px auto;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        /* BOTÃO (se quiser adicionar depois) */
+        .btn-clash {
+            background: linear-gradient(#ffcc00, #ff9500);
+            border: none;
+            border-radius: 20px;
+            padding: 10px 25px;
+            font-family: 'Supercell Magic', sans-serif;
+            font-weight: bold;
+            color: #5e2a00;
+            cursor: pointer;
+            box-shadow: 0 4px #cc7a00;
+            margin-top: 20px;
+        }
+
+        .btn-clash:hover {
+            background: linear-gradient(#ffd700, #ffa500);
+        }
+
+        .btn-clash:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px #cc7a00;
+        }
