@@ -1,58 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deck explosão dupla</title>
-    <link rel="stylesheet" href="art.css">
+    <title>Deck Explosão Dupla - Clash Royale</title>
+    <style>
+        :root {
+            --clash-red: #FF3B30;
+            --clash-blue: #5AC8FA;
+            --clash-gold: #FFCC00;
+            --clash-dark: #1E1E1E;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--clash-red);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .deck-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            width: 140px;
+            height: 180px;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .deck-info {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            color: var(--clash-blue);
+            border-bottom: 2px solid var(--clash-gold);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .card-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .card-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--clash-red);
+        }
+        
+        .card-cost {
+            font-weight: bold;
+            color: var(--clash-red);
+        }
+        
+        .strategy {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--clash-blue);
+        }
+        
+        .strategy-title {
+            color: var(--clash-blue);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tips {
+            background-color: #fffaf0;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--clash-gold);
+        }
+        
+        .ai-notice {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                width: 100px;
+                height: 130px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .card-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                width: 80px;
+                height: 110px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .deck-info {
+                padding: 15px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<p>Meu deck favorito tem as seguintes cartas:</p>
-<img src="destruidores_de_muro-removebg-preview.png"width="140px" height="180 px"> 
-<img src="bola_evo-removebg-preview.png"width="140px" height="180 px"> 
-<img src="cavaleiro-removebg-preview.png"width="140px" height="180 px"> 
-<img src="gigante-removebg-preview.png"width="140px" height="180 px">
-<br><br>
-<img src="arqueiro.jpeg"width="140px" height="180 px">
-<img src="barril-removebg-preview.png"width="140px" height="180 px">
-<img src="gangue-removebg-preview.png"wiwidth="140px" height="180 px">
-<img src="clone-removebg-preview.png" width="140px" height="180 px">
-
-
-
-
-
-    <P>(Este texto foi feito com ia)</P>
-    <BR><br> 
-    <p>Deck: Pressão Explosiva com Gigante Esqueleto + Clone
-Mana Média: 3.3 | Estilo de Jogo: Controle / Ataques Surpresa
-Cartas:
-Gigante Esqueleto (6 de elixir) – Tanque explosivo e principal win condition.
-Clone (3 de elixir) – Duplica o Gigante Esqueleto e tropas agressivas.
-Gangue de Goblins (2 de elixir) – Dano rápido e ótima com Clone.
-Destruidores de Muro (3 de elixir) – Dano alto contra torres e tanques.
-Barril de Esqueletos (3 de elixir) – Pressão barata e distração.
-Cavaleiro (3 de elixir) – Defesa versátil contra tropas terrestres.
-Arqueiro Mágico (4 de elixir) – Suporte em área e ataque longo alcance.
-Bola de Neve (2 de elixir) – Controle de multidão e ajuda na defesa.
-Cálculo do custo:
-(6 + 3 + 2 + 3 + 3 + 3 + 4 + 2) / 8 = 3,25 (arredondado para 3,3).
-
-Como Jogar:
-🔥 Ataque Principal:
-Gigante Esqueleto + Clone: Envie o Gigante Esqueleto e, quando ele estiver perto da torre, use Clone para duplicá-lo. Se ambos explodirem, a torre cai fácil!
-Gangue de Goblins + Clone: Se o inimigo não tiver feitiços em área, clonar a gangue causa dano massivo.
-Destruidores de Muro: Apoiam o Gigante Esqueleto ou atacam em contra-ataques.
-🛡️ Defesa Sólida:
-Cavaleiro + Bola de Neve: Para parar tropas médias (como Cavaleiro Valente ou Príncipe).
-Arqueiro Mágico: Excelente contra hordas (como Esqueletos, Goblins ou Bárbaros).
-Barril de Esqueletos: Distrai tropas de área (como Bruxa ou Mago de Gelo).
-⚠️ Dicas Importantes:
-Cuidado com feitiços em área (Veneno, Mágico de Gelo, Valquíria). Se o inimigo tem muitos, evite clonar muitas tropas de uma vez.
-Use Bola de Neve para ajudar o Gigante Esqueleto a chegar na torre.
-Barril de Esqueletos pode enganar o Log ou Zap do inimigo antes de você mandar a Gangue de Goblins.
- </p>
-
-
+    <div class="container">
+        <header>
+            <h1>Deck Explosão Dupla</h1>
+            <p>Mana Média: 3.3 | Estilo de Jogo: Controle / Ataques Surpresa</p>
+        </header>
+        
+        <div class="deck-cards">
+            <img src="destruidores_de_muro-removebg-preview.png" class="card" alt="Destruidores de Muro">
+            <img src="bola_evo-removebg-preview.png" class="card" alt="Bola de Neve">
+            <img src="cavaleiro-removebg-preview.png" class="card" alt="Cavaleiro">
+            <img src="gigante-removebg-preview.png" class="card" alt="Gigante Esqueleto">
+            <img src="arqueiro.jpeg" class="card" alt="Arqueiro Mágico">
+            <img src="barril-removebg-preview.png" class="card" alt="Barril de Esqueletos">
+            <img src="gangue-removebg-preview.png" class="card" alt="Gangue de Goblins">
+            <img src="clone-removebg-preview.png" class="card" alt="Clone">
+        </div>
+        
+        <div class="deck-info">
+            <h2 class="section-title">🎴 Cartas do Deck</h2>
+            
+            <div class="card-list">
+                <div class="card-item">
+                    <span class="card-cost">Gigante Esqueleto (6)</span> – Tanque explosivo e principal win condition.
+                </div>
+                <div class="card-item">
+                    <span class="card-cost">Clone (3)</span> – Duplica o Gigante Esqueleto e tropas agressivas.
+                </div>
+                <div class="card-item">
+                    <span class="card-cost">Gangue de Goblins (3)</span> – Dano rápido e ótima com Clone.
+                </div>
+                <div class="card-item">
+                    <span class="card-cost">Destruidores de Muro (2)</span> – Dano alto contra torres e tanques.
+                </div>
+                <div class="card-item">
+                    <span class="card-cost">Barril de Esqueletos (3)</span> – Pressão barata e distração.
+                </div>
+                <div class="card-item">
+                    <span class="card-cost">Cavaleiro (3)</span> – Defesa versátil contra tropas terrestres.
+                </div>
+                <div class="card-item">
+                    <span class="card-cost">Arqueiro Mágico (4)</span> – Suporte em área e ataque de longo alcance.
+                </div>
+                <div class="card-item">
+                    <span class="card-cost">Bola de Neve (2)</span> – Controle de multidão e ajuda na defesa.
+                </div>
+            </div>
+            
+            <p><strong>Cálculo do custo:</strong><br>
+            (6 + 3 + 2 + 3 + 3 + 3 + 4 + 2) / 8 = <strong>3.3</strong></p>
+            
+            <h2 class="section-title">🔥 Como Jogar</h2>
+            
+            <h3 class="strategy-title">⚔️ Ataque Principal</h3>
+            <div class="strategy">
+                <p><strong>Gigante Esqueleto + Clone</strong> → Envie o Gigante e, perto da torre, use Clone. Se ambos explodirem, a torre cai fácil!</p>
+                <p><strong>Gangue de Goblins + Clone</strong> → Se o inimigo não tiver feitiços em área, clonar a Gangue causa dano massivo.</p>
+                <p><strong>Destruidores de Muro</strong> → Apoiam o Gigante ou atacam em contra-ataques.</p>
+            </div>
+            
+            <h3 class="strategy-title">🛡️ Defesa Sólida</h3>
+            <div class="strategy">
+                <p><strong>Cavaleiro + Bola de Neve</strong> → Para parar tropas médias (Cavaleiro Valente, Príncipe).</p>
+                <p><strong>Arqueiro Mágico</strong> → Excelente contra hordas (Esqueletos, Goblins, Bárbaros).</p>
+                <p><strong>Barril de Esqueletos</strong> → Distrai tropas de área (Bruxa, Mago de Gelo).</p>
+            </div>
+            
+            <h3 class="strategy-title">⚠️ Dicas Importantes</h3>
+            <div class="tips">
+                <p>• Cuidado com feitiços em área (Veneno, Mágico de Gelo, Valquíria). Se o inimigo tiver muitos, evite clonar muitas tropas de uma vez.</p>
+                <p>• Use Bola de Neve para ajudar o Gigante Esqueleto a chegar na torre.</p>
+                <p>• Barril de Esqueletos pode enganar o Log ou Zap do inimigo antes de mandar a Gangue.</p>
+            </div>
+        </div>
+        
+        <p class="ai-notice">(Este texto foi feito com IA)</p>
+    </div>
 </body>
 </html>

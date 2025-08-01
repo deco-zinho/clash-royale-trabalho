@@ -1,57 +1,234 @@
 /* FONTE DO CLASH ROYALE (Supercell Magic) */
-        @import url('https://fonts.cdnfonts.com/css/supercell-magic');
         
-        body {
-            font-family: 'Supercell Magic', sans-serif;
-            background-color: #1a2a42; /* Cor de fundo do Clash Royale */
-            color: #fff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
+        
+    :root {
+  --primary: #FF3B30;       /* Vermelho Clash Royale */
+  --secondary: #5AC8FA;     /* Azul Clash Royale */
+  --accent: #FFCC00;        /* Dourado Clash Royale */
+  --dark: #1E1E1E;          /* Preto para textos */
+  --light: #F8F8F8;         /* Fundo claro */
+  --gray: #E0E0E0;          /* Bordas e detalhes */
+  --radius: 12px;           /* Bordas arredondadas */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+  --transition: all 0.3s ease; /* Transição suave */
+}
 
-        /* ESTILO DAS CARTAS (efeito hover e sombra) */
-        img {
-            width: 140px;
-            height: 180px;
-            margin: 5px;
-            transition: transform 0.2s;
-            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5)); /* Brilho dourado */
-        }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-        img:hover {
-            transform: scale(1.05) rotate(-2deg); /* Efeito de "levantar" a carta */
-            cursor: pointer;
-        }
+body {
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
 
-        /* ESTILO DO TEXTO (títulos e parágrafos) */
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-            max-width: 800px;
-            margin: 10px auto;
-            text-shadow: 1px 1px 2px #000;
-        }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-        /* BOTÃO (se quiser adicionar depois) */
-        .btn-clash {
-            background: linear-gradient(#ffcc00, #ff9500);
-            border: none;
-            border-radius: 20px;
-            padding: 10px 25px;
-            font-family: 'Supercell Magic', sans-serif;
-            font-weight: bold;
-            color: #5e2a00;
-            cursor: pointer;
-            box-shadow: 0 4px #cc7a00;
-            margin-top: 20px;
-        }
+/* Header Estilizado */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
 
-        .btn-clash:hover {
-            background: linear-gradient(#ffd700, #ffa500);
-        }
+.header::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
 
-        .btn-clash:active {
-            transform: translateY(2px);
-            box-shadow: 0 2px #cc7a00;
-        }
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--dark);
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+/* Grid de Cartas Responsivo */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  aspect-ratio: 3/4;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Seções de Conteúdo */
+.section {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+}
+
+/* Lista de Cartas */
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card-item {
+  background: var(--light);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  transition: var(--transition);
+}
+
+.card-item:hover {
+  background: white;
+  transform: translateX(5px);
+}
+
+.elixir-cost {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Estratégias */
+.strategy-group {
+  margin-top: 2rem;
+}
+
+.strategy-title {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.strategy-content {
+  background: rgba(90, 200, 250, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.tips {
+  background: rgba(255, 204, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  margin-top: 2rem;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+  
+  .cards-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+  
+  .card {
+    aspect-ratio: 2/3;
+  }
+}
